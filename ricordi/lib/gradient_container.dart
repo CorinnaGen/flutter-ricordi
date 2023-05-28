@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ricordi/styled_text.dart';
-import 'package:ricordi/picture_container.dart';
+import 'package:ricordi/change_picture.dart';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
-const homePicture = 'asset/images/teamhobbits1.jpg';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer(this.colors, {super.key});
@@ -14,15 +12,12 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
+      padding: const EdgeInsets.all(25),
       decoration: BoxDecoration(
         gradient: LinearGradient(
             colors: colors, begin: startAlignment, end: endAlignment),
       ),
-      child: const Center(
-          // child: Column(
-          //   children: [PictureContainer(homePicture), StyledText('Ricordi')],
-          // ),
-          ),
+      child: const Center(child: ChangePicture()),
     );
   }
 }
