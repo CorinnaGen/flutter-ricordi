@@ -1,0 +1,6 @@
+package com.example.ricordi
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
